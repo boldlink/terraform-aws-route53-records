@@ -10,13 +10,14 @@
 
 [<img src="https://avatars.githubusercontent.com/u/25388280?s=200&v=4" width="96"/>](https://boldlink.io)
 
-# terraform-aws-ec2 supporting resources
+# terraform-aws-route53-records supporting resources
 
 These stacks are to be used on the examples testing and where setup to minimum dependencies,
 they are not in any way the recommended setup for a production grade implementation.
 
 This stack builds:
-* VPC with public and Private subnets
+* VPC with public and single NAT
+* Route 53 Hosted Zone
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
@@ -97,4 +98,4 @@ make clean
 make cleansupporting
 ```
 
-#### BOLDLink-SIG 2022
+#### BOLDLink-SIG 2023
