@@ -27,11 +27,13 @@ Examples available [`here`](./examples)
 **NOTE:** These examples use the latest version of this module
 
 ```hcl
-module "miniumum" {
-  source  = "boldlink/<module_name>/<provider>"
-  version = "x.x.x"
-  <insert the minimum required variables here if any are required>
-  ...
+module "minimum_example" {
+  source  = "../../"
+  zone_id = local.zone_id
+  name    = var.name
+  type    = var.type
+  ttl     = var.ttl
+  records = var.records
 }
 ```
 ## Documentation
