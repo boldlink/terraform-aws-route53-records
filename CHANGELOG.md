@@ -5,18 +5,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-- Feature/fix
-- Feature/fix
-- Feature/fix
-- ...
+- feat: Showcase usage of other routing policies in the examples
 
-## [1.0.0] - YYYY-MM-DD
-### Description
-- Feature/fix
-- Feature/fix
-- Feature/fix
-- ...
+## [1.0.0] - 2023-05-18
+- feat: Added ability to use supported features for the resource in the same module
 
-[Unreleased]: https://github.com/boldlink/terraform-module-template/compare/2.0.2...HEAD
+## [0.1.0] - 2023-05-18
+- Initial commit
+- Add files from template repository
 
-[1.0.0]: https://github.com/boldlink/terraform-module-template/releases/tag/1.0.0
+[Unreleased]: https://github.com/boldlink/terraform-aws-route53-records/compare/1.0.0...HEAD
+
+[1.0.0]: https://github.com/boldlink/terraform-aws-route53-records/releases/tag/1.0.0
