@@ -1,12 +1,12 @@
-[![License](https://img.shields.io/badge/License-Apache-blue.svg)](https://github.com/boldlink/terraform-module-template/blob/main/LICENSE)
-[![Latest Release](https://img.shields.io/github/release/boldlink/terraform-module-template.svg)](https://github.com/boldlink/terraform-module-template/releases/latest)
-[![Build Status](https://github.com/boldlink/terraform-module-template/actions/workflows/update.yaml/badge.svg)](https://github.com/boldlink/terraform-module-template/actions)
-[![Build Status](https://github.com/boldlink/terraform-module-template/actions/workflows/release.yaml/badge.svg)](https://github.com/boldlink/terraform-module-template/actions)
-[![Build Status](https://github.com/boldlink/terraform-module-template/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/boldlink/terraform-module-template/actions)
-[![Build Status](https://github.com/boldlink/terraform-module-template/actions/workflows/pr-labeler.yaml/badge.svg)](https://github.com/boldlink/terraform-module-template/actions)
-[![Build Status](https://github.com/boldlink/terraform-module-template/actions/workflows/module-examples-tests.yaml/badge.svg)](https://github.com/boldlink/terraform-module-template/actions)
-[![Build Status](https://github.com/boldlink/terraform-module-template/actions/workflows/checkov.yaml/badge.svg)](https://github.com/boldlink/terraform-module-template/actions)
-[![Build Status](https://github.com/boldlink/terraform-module-template/actions/workflows/auto-badge.yaml/badge.svg)](https://github.com/boldlink/terraform-module-template/actions)
+[![License](https://img.shields.io/badge/License-Apache-blue.svg)](https://github.com/boldlink/terraform-aws-route53-records/blob/main/LICENSE)
+[![Latest Release](https://img.shields.io/github/release/boldlink/terraform-aws-route53-records.svg)](https://github.com/boldlink/terraform-aws-route53-records/releases/latest)
+[![Build Status](https://github.com/boldlink/terraform-aws-route53-records/actions/workflows/update.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-route53-records/actions)
+[![Build Status](https://github.com/boldlink/terraform-aws-route53-records/actions/workflows/release.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-route53-records/actions)
+[![Build Status](https://github.com/boldlink/terraform-aws-route53-records/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-route53-records/actions)
+[![Build Status](https://github.com/boldlink/terraform-aws-route53-records/actions/workflows/pr-labeler.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-route53-records/actions)
+[![Build Status](https://github.com/boldlink/terraform-aws-route53-records/actions/workflows/module-examples-tests.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-route53-records/actions)
+[![Build Status](https://github.com/boldlink/terraform-aws-route53-records/actions/workflows/checkov.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-route53-records/actions)
+[![Build Status](https://github.com/boldlink/terraform-aws-route53-records/actions/workflows/auto-badge.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-route53-records/actions)
 
 [<img src="https://avatars.githubusercontent.com/u/25388280?s=200&v=4" width="96"/>](https://boldlink.io)
 
@@ -19,23 +19,35 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14.11 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.20.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.65.0 |
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.67.0 |
 
 ## Modules
 
-No modules.
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_minimum_example"></a> [minimum\_example](#module\_minimum\_example) | ../../ | n/a |
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [aws_route53_zone.selected](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/route53_zone) | data source |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_name"></a> [name](#input\_name) | Name of the record | `string` | `"www.minimum-example.com"` | no |
+| <a name="input_records"></a> [records](#input\_records) | Records for the record | `list(string)` | <pre>[<br>  "10.0.0.0"<br>]</pre> | no |
+| <a name="input_ttl"></a> [ttl](#input\_ttl) | Time to live for the record | `number` | `60` | no |
+| <a name="input_type"></a> [type](#input\_type) | Type of the record | `string` | `"A"` | no |
+| <a name="input_zone_name"></a> [zone\_name](#input\_zone\_name) | The name of the hosted zone | `string` | `"boldlink-r53-records-example.com"` | no |
 
 ## Outputs
 
@@ -55,4 +67,4 @@ This repository uses third party software:
   * Install with `brew install tflint`
   * Manually use via pre-commit
 
-#### BOLDLink-SIG 2022
+#### BOLDLink-SIG 2023
