@@ -1,10 +1,10 @@
-module "route53-records-zone" {
+module "route53_records_zone" {
   source = "boldlink/route53/aws"
   name   = var.name
   tags   = var.tags
 }
 
-module "route53-records-elb-vpc" {
+module "route53_records_elb_vpc" {
   source                  = "boldlink/vpc/aws"
   version                 = "3.0.3"
   name                    = var.name
