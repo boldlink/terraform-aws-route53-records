@@ -34,7 +34,8 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_rds_vpc"></a> [rds\_vpc](#module\_rds\_vpc) | boldlink/vpc/aws | 3.0.3 |
+| <a name="module_route53_records_elb_vpc"></a> [route53\_records\_elb\_vpc](#module\_route53\_records\_elb\_vpc) | boldlink/vpc/aws | 3.0.3 |
+| <a name="module_route53_records_zone"></a> [route53\_records\_zone](#module\_route53\_records\_zone) | boldlink/route53/aws | n/a |
 
 ## Resources
 
@@ -50,9 +51,9 @@ No resources.
 | <a name="input_enable_internal_subnets"></a> [enable\_internal\_subnets](#input\_enable\_internal\_subnets) | Whether to enable internal subnets | `bool` | `true` | no |
 | <a name="input_enable_public_subnets"></a> [enable\_public\_subnets](#input\_enable\_public\_subnets) | Whether to enable public subnets | `bool` | `true` | no |
 | <a name="input_map_public_ip_on_launch"></a> [map\_public\_ip\_on\_launch](#input\_map\_public\_ip\_on\_launch) | Whether assign public IPs by default to instances launched on subnet | `bool` | `true` | no |
-| <a name="input_name"></a> [name](#input\_name) | Name of the stack | `string` | `"terraform-aws-rds"` | no |
+| <a name="input_name"></a> [name](#input\_name) | Name of the stack | `string` | `"boldlink-r53-records-example.com"` | no |
 | <a name="input_nat"></a> [nat](#input\_nat) | Choose `single` or `multi` for NATs | `string` | `"single"` | no |
-| <a name="input_tags"></a> [tags](#input\_tags) | Tags to apply to the created resources | `map(string)` | <pre>{<br>  "Department": "DevOps",<br>  "Environment": "examples",<br>  "LayerId": "cExample",<br>  "LayerName": "cExample",<br>  "Owner": "Boldlink",<br>  "Project": "Examples",<br>  "user::CostCenter": "terraform-registry"<br>}</pre> | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | Tags to apply to the created resources | `map(string)` | <pre>{<br>  "Department": "DevOps",<br>  "Environment": "examples",<br>  "LayerId": "Example",<br>  "LayerName": "Example",<br>  "Owner": "hugo.almeida",<br>  "Project": "Examples",<br>  "user::CostCenter": "terraform-registry"<br>}</pre> | no |
 
 ## Outputs
 
