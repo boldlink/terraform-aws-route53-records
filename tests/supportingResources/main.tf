@@ -6,7 +6,7 @@ module "route53_records_zone" {
 
 module "route53_records_elb_vpc" {
   source                  = "boldlink/vpc/aws"
-  version                 = "3.0.3"
+  version                 = "3.0.4"
   name                    = var.name
   cidr_block              = var.cidr_block
   enable_dns_support      = var.enable_dns_support
