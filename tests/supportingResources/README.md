@@ -35,7 +35,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_route53_records_elb_vpc"></a> [route53\_records\_elb\_vpc](#module\_route53\_records\_elb\_vpc) | boldlink/vpc/aws | 3.0.3 |
+| <a name="module_route53_records_elb_vpc"></a> [route53\_records\_elb\_vpc](#module\_route53\_records\_elb\_vpc) | boldlink/vpc/aws | 3.0.4 |
 | <a name="module_route53_records_zone"></a> [route53\_records\_zone](#module\_route53\_records\_zone) | boldlink/route53/aws | n/a |
 
 ## Resources
