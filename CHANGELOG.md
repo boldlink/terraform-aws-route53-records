@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 - feat: Showcase usage of other routing policies in the examples
+- fix: CKV_TF_1 checkov alert
 
 ##[1.0.1] - 2023-08-14
 - fix: VPC version used in supporting resources. This is to fix pre-commit errors for deprecated outputs
