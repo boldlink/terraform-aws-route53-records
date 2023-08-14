@@ -6,6 +6,7 @@
 [![Build Status](https://github.com/boldlink/terraform-aws-route53-records/actions/workflows/pr-labeler.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-route53-records/actions)
 [![Build Status](https://github.com/boldlink/terraform-aws-route53-records/actions/workflows/module-examples-tests.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-route53-records/actions)
 [![Build Status](https://github.com/boldlink/terraform-aws-route53-records/actions/workflows/checkov.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-route53-records/actions)
+[![Build Status](https://github.com/boldlink/terraform-aws-route53-records/actions/workflows/auto-merge.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-route53-records/actions)
 [![Build Status](https://github.com/boldlink/terraform-aws-route53-records/actions/workflows/auto-badge.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-route53-records/actions)
 
 [<img src="https://avatars.githubusercontent.com/u/25388280?s=200&v=4" width="96"/>](https://boldlink.io)
