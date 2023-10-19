@@ -44,7 +44,7 @@
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | Name of the record | `string` | `"www.minimum-example.com"` | no |
+| <a name="input_name"></a> [name](#input\_name) | Name of the record | `string` | `"minimum"` | no |
 | <a name="input_records"></a> [records](#input\_records) | Records for the record | `list(string)` | <pre>[<br>  "10.0.0.0"<br>]</pre> | no |
 | <a name="input_ttl"></a> [ttl](#input\_ttl) | Time to live for the record | `number` | `60` | no |
 | <a name="input_type"></a> [type](#input\_type) | Type of the record | `string` | `"A"` | no |

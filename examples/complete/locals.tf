@@ -63,7 +63,7 @@ locals {
       }
 
       failover_routing_policy = {
-        type = "PRIMARY" 
+        type = "PRIMARY"
       }
     }
     latency = {
@@ -81,7 +81,7 @@ locals {
       }
 
       latency_routing_policy = {
-        region = data.aws_region.current.name 
+        region = data.aws_region.current.name
       }
     }
     ip-based = {
@@ -100,7 +100,7 @@ locals {
 
       cidr_routing_policy = {
         collection_id = aws_route53_cidr_collection.example.id
-        location_name = "*" 
+        location_name = "*"
       }
     }
   }
