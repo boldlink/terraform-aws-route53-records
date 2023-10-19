@@ -29,7 +29,8 @@ Examples available [`here`](./examples)
 
 ```hcl
 module "minimum_example" {
-  source  = "../../"
+  source  = "boldlink/route53-records/aws"
+  version = "insert_latest_version"
   zone_id = local.zone_id
   name    = var.name
   type    = var.type
