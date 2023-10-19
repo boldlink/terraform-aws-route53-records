@@ -1,7 +1,7 @@
 variable "name" {
   type        = string
   description = "Name of the record"
-  default     = "www.minimum-example.com"
+  default     = "minimum"
 }
 
 variable "type" {

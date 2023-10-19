@@ -17,6 +17,10 @@ module "complete_example_record_elb" {
   ]
 }
 
+resource "aws_route53_cidr_collection" "example" {
+  name = "collection-1"
+}
+
 # Create Multiple records
 module "complete_example_record" {
   source                     = "../../"
@@ -31,5 +35,8 @@ module "complete_example_record" {
   weighted_routing_policy    = lookup(each.value, "weighted_routing_policy", {})
   alias                      = lookup(each.value, "alias", {})
   geolocation_routing_policy = lookup(each.value, "geolocation_routing_policy", {})
+  failover_routing_policy    = lookup(each.value, "failover_routing_policy", {})
+  latency_routing_policy     = lookup(each.value, "latency_routing_policy", {})
+  cidr_routing_policy        = lookup(each.value, "cidr_routing_policy", {})
   depends_on                 = [module.complete_example_record_elb]
 }
