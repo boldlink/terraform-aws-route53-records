@@ -26,7 +26,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.21.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.23.1 |
 
 ## Modules
 
@@ -40,6 +40,7 @@
 | Name | Type |
 |------|------|
 | [aws_route53_cidr_collection.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_cidr_collection) | resource |
+| [aws_route53_health_check.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_health_check) | resource |
 | [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones) | data source |
 | [aws_region.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/region) | data source |
 | [aws_route53_zone.selected](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/route53_zone) | data source |
@@ -62,7 +63,6 @@
 | <a name="input_c_record_ttl"></a> [c\_record\_ttl](#input\_c\_record\_ttl) | The TTL of the record. | `number` | `10` | no |
 | <a name="input_c_record_weight"></a> [c\_record\_weight](#input\_c\_record\_weight) | A numeric value indicating the relative weight of the record. | `number` | `90` | no |
 | <a name="input_country"></a> [country](#input\_country) | Country for geo record policy | `string` | `"US"` | no |
-| <a name="input_elb_name"></a> [elb\_name](#input\_elb\_name) | Name of the elb | `string` | `"complete-example-r53-record-elb"` | no |
 | <a name="input_evaluate_target_health"></a> [evaluate\_target\_health](#input\_evaluate\_target\_health) | Whether you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set | `bool` | `true` | no |
 | <a name="input_general_record_type"></a> [general\_record\_type](#input\_general\_record\_type) | Record type to be used for a number of records | `string` | `"A"` | no |
 | <a name="input_geo_record_name"></a> [geo\_record\_name](#input\_geo\_record\_name) | Name of geo record | `string` | `"geo"` | no |
@@ -73,6 +73,7 @@
 | <a name="input_instance_protocol"></a> [instance\_protocol](#input\_instance\_protocol) | Traffic protocol to instance | `string` | `"http"` | no |
 | <a name="input_lb_port"></a> [lb\_port](#input\_lb\_port) | The load balancer port | `number` | `80` | no |
 | <a name="input_lb_protocol"></a> [lb\_protocol](#input\_lb\_protocol) | The load balancer traffic protocol | `string` | `"http"` | no |
+| <a name="input_name"></a> [name](#input\_name) | Name of the stack | `string` | `"complete-example-r53-record"` | no |
 | <a name="input_subdivision"></a> [subdivision](#input\_subdivision) | Subdivision for geo record policy | `string` | `"CA"` | no |
 | <a name="input_supporting_name"></a> [supporting\_name](#input\_supporting\_name) | The name of the vpc for load balancer | `string` | `"boldlink-r53-records-example.com"` | no |
 
