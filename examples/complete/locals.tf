@@ -49,11 +49,10 @@ locals {
       }
     }
     failover = {
-      zone_id = local.zone_id
-      name    = "failover"
-      type    = var.general_record_type
-      ttl     = "60"
-      #allow_overwrite = var.allow_overwrite
+      zone_id         = local.zone_id
+      name            = "failover"
+      type            = var.general_record_type
+      ttl             = "60"
       set_identifier  = "primary-failover"
       health_check_id = aws_route53_health_check.example.id
       records         = ["192.168.2.45"]
