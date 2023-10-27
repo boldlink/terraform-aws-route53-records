@@ -46,10 +46,10 @@ variable "c_record_records" {
   default     = ["live.example.com"]
 }
 
-variable "elb_name" {
+variable "name" {
   type        = string
-  description = "Name of the elb"
-  default     = "complete-example-r53-record-elb"
+  description = "Name of the stack"
+  default     = "complete-example-r53-record"
 }
 
 variable "instance_port" {
