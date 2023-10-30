@@ -1,7 +1,7 @@
 variable "a_record_name" {
   type        = string
   description = "The name of the record."
-  default     = "www.example.com"
+  default     = "a-record"
 }
 
 variable "c_record_name" {
@@ -46,10 +46,10 @@ variable "c_record_records" {
   default     = ["live.example.com"]
 }
 
-variable "elb_name" {
+variable "name" {
   type        = string
-  description = "Name of the elb"
-  default     = "complete-example-r53-record-elb"
+  description = "Name of the stack"
+  default     = "complete-example-r53-record"
 }
 
 variable "instance_port" {
@@ -85,10 +85,10 @@ variable "evaluate_target_health" {
 variable "alias_name" {
   type        = string
   description = "The name of the alias record."
-  default     = "complete-example-alias-record.com"
+  default     = "alias-record"
 }
 
-variable "vpc_name" {
+variable "supporting_name" {
   type        = string
   description = "The name of the vpc for load balancer"
   default     = "boldlink-r53-records-example.com"
@@ -116,7 +116,7 @@ variable "geo_record_ttl" {
 variable "geo_record_name" {
   type        = string
   description = "Name of geo record"
-  default     = "geo-policy-usage.com"
+  default     = "geo"
 }
 
 variable "allow_overwrite" {

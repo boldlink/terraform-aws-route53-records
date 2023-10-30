@@ -48,5 +48,68 @@ locals {
         subdivision = var.subdivision
       }
     }
+    failover = {
+      zone_id         = local.zone_id
+      name            = "failover"
+      type            = var.general_record_type
+      ttl             = "60"
+      set_identifier  = "primary-failover"
+      health_check_id = aws_route53_health_check.example.id
+      records         = ["192.168.2.45"]
+
+      failover_routing_policy = {
+        type = "PRIMARY"
+      }
+    }
+    latency = {
+      zone_id         = local.zone_id
+      name            = "latency"
+      type            = var.general_record_type
+      ttl             = "60"
+      allow_overwrite = var.allow_overwrite
+      set_identifier  = "latency"
+
+      alias = {
+        name                   = module.complete_example_record_elb.dns_name
+        zone_id                = module.complete_example_record_elb.zone_id
+        evaluate_target_health = var.evaluate_target_health
+      }
+
+      latency_routing_policy = {
+        region = data.aws_region.current.name
+      }
+    }
+    ip-based = {
+      zone_id         = local.zone_id
+      name            = "ip-based"
+      type            = var.general_record_type
+      ttl             = "60"
+      allow_overwrite = var.allow_overwrite
+      set_identifier  = "ip-based"
+
+      alias = {
+        name                   = module.complete_example_record_elb.dns_name
+        zone_id                = module.complete_example_record_elb.zone_id
+        evaluate_target_health = var.evaluate_target_health
+      }
+
+      cidr_routing_policy = {
+        collection_id = aws_route53_cidr_collection.example.id
+        location_name = "*"
+      }
+    }
+    multivalue = {
+      name                             = "multivalue"
+      type                             = "A"
+      records                          = ["192.168.2.44"]
+      allow_overwrite                  = true
+      multivalue_answer_routing_policy = true
+      set_identifier                   = "example-with-multi-value-policy"
+      zone_id                          = local.zone_id
+      ttl                              = 300
+      weighted_routing_policy = {
+        weight = var.c_record_weight
+      }
+    }
   }
 }
